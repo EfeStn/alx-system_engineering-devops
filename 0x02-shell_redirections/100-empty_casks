@@ -1,0 +1,3 @@
+#!/bin/bash
+find . -iname '.gif' -ls -F -b -a | sed 's/.\/$//' | sed 's/\.[^.]$//' | sed 's/[[:lower:]]\.[[:upper:]]\.[[:lower:]]$/\L\1/' | xargs -n 1 basename -s -F
+
